@@ -14,7 +14,7 @@ namespace KnockOffWordle
 
             for(int i=0;i<1;i++)
             {
-                random = numberGenerator.Next(0,163);
+                random = numberGenerator.Next(0,598);
             }
 
             string theSelectedWord = (Words[random]);
@@ -48,22 +48,22 @@ namespace KnockOffWordle
                 else if (letter1 == correctLetter0)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("The First Letter Is In The Wrong Position!");
+                    Console.WriteLine("The First Letter Is In The Wrong Position");
                 }
                 else if (letter2 == correctLetter0)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("The First Letter Is In The Wrong Position!");
+                    Console.WriteLine("The First Letter Is In The Wrong Position");
                 }
                 else if (letter3 == correctLetter0)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("The First Letter Is In The Wrong Position!");
+                    Console.WriteLine("The First Letter Is In The Wrong Position");
                 }
                 else if (letter4 == correctLetter0)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("The First Letter Is In The Wrong Position!");
+                    Console.WriteLine("The First Letter Is In The Wrong Position");
                 }
                 else
                 {
@@ -80,22 +80,22 @@ namespace KnockOffWordle
                 else if (letter0 == correctLetter1)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("The Second Letter Is In The Wrong Position!");
+                    Console.WriteLine("The Second Letter Is In The Wrong Position");
                 }
                 else if (letter2 == correctLetter1)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("The Second Letter Is In The Wrong Position!");
+                    Console.WriteLine("The Second Letter Is In The Wrong Position");
                 }
                 else if (letter3 == correctLetter1)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("The Second Letter Is In The Wrong Position!");
+                    Console.WriteLine("The Second Letter Is In The Wrong Position");
                 }
                 else if (letter4 == correctLetter1)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("The Second Letter Is In The Wrong Position!");
+                    Console.WriteLine("The Second Letter Is In The Wrong Position");
                 }
                 else
                 {
@@ -112,22 +112,22 @@ namespace KnockOffWordle
                 else if (letter0 == correctLetter2)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("The Third Letter Is In The Wrong Position!");
+                    Console.WriteLine("The Third Letter Is In The Wrong Position");
                 }
                 else if (letter1 == correctLetter2)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("The Third Letter Is In The Wrong Position!");
+                    Console.WriteLine("The Third Letter Is In The Wrong Position");
                 }
                 else if (letter3 == correctLetter2)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("The Third Letter Is In The Wrong Position!");
+                    Console.WriteLine("The Third Letter Is In The Wrong Position");
                 }
                 else if (letter4 == correctLetter2)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("The Third Letter Is In The Wrong Position!");
+                    Console.WriteLine("The Third Letter Is In The Wrong Position");
                 }
                 else
                 {
@@ -144,22 +144,22 @@ namespace KnockOffWordle
                 else if (letter0 == correctLetter3)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("The Fourth Letter Is In The Wrong Position!");
+                    Console.WriteLine("The Fourth Letter Is In The Wrong Position");
                 }
                 else if (letter1 == correctLetter3)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("The Fourth Letter Is In The Wrong Position!");
+                    Console.WriteLine("The Fourth Letter Is In The Wrong Position");
                 }
                 else if (letter2 == correctLetter3)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("The Fourth Letter Is In The Wrong Position!");
+                    Console.WriteLine("The Fourth Letter Is In The Wrong Position");
                 }
                 else if (letter4 == correctLetter3)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("The Fourth Letter Is In The Wrong Position!");
+                    Console.WriteLine("The Fourth Letter Is In The Wrong Position");
                 }
                 else
                 {
@@ -177,25 +177,25 @@ namespace KnockOffWordle
                 else if (letter0 == correctLetter4)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("The Fifth Letter Is In The Wrong Position!");
+                    Console.WriteLine("The Fifth Letter Is In The Wrong Position");
                     Console.WriteLine("");
                 }
                 else if (letter1 == correctLetter4)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("The Fifth Letter Is In The Wrong Position!");
+                    Console.WriteLine("The Fifth Letter Is In The Wrong Position");
                     Console.WriteLine("");
                 }
                 else if (letter2 == correctLetter4)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("The Fifth Letter Is In The Wrong Position!");
+                    Console.WriteLine("The Fifth Letter Is In The Wrong Position");
                     Console.WriteLine("");
                 }
                 else if (letter3 == correctLetter4)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("The Fifth Letter Is In The Wrong Position!");
+                    Console.WriteLine("The Fifth Letter Is In The Wrong Position");
                     Console.WriteLine("");
                 }
                 else
@@ -209,8 +209,8 @@ namespace KnockOffWordle
                 if (playerGuess == theSelectedWord)
                 {
                     Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.WriteLine("You did it!");
-                    i = 999;
+                    Console.WriteLine("You guessed the word!");
+                    i = 1000;
                 }
 
             }
