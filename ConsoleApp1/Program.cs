@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿using WordNamespace;
+using GuessedWordNamespace;
+using SelectedWordNamespace;
 namespace KnockOffWordle
 {
     class Game
@@ -18,28 +18,52 @@ namespace KnockOffWordle
             }
 
             string theSelectedWord = (Words[random]);
+            SelectedWord selectedWordRef = new SelectedWord(theSelectedWord);
 
             Console.WriteLine("Type your guess (lowercase only)");
 
             for(int i=0;i<7;i++)
             {
                 Console.ForegroundColor = ConsoleColor.White;
+                //Console.WriteLine(selectedWordRef.WordValue);  TESTING PURPOSES
+                string playerGuess = Convert.ToString(Console.ReadLine());  
+                GuessedWord guessedWordRef = new GuessedWord(playerGuess);
 
-                string playerGuess = Convert.ToString(Console.ReadLine());
+                /*char letter0 = selectedWordRef.WordValue[0];
+                char letter1 = selectedWordRef.WordValue[1];
+                char letter2 = selectedWordRef.WordValue[2];
+                char letter3 = selectedWordRef.WordValue[3];
+                char letter4 = selectedWordRef.WordValue[4];
 
-                char letter0 = theSelectedWord[0];
-                char letter1 = theSelectedWord[1];
-                char letter2 = theSelectedWord[2];
-                char letter3 = theSelectedWord[3];
-                char letter4 = theSelectedWord[4];
+                char correctLetter0 = guessedWordRef.WordValue[0];
+                char correctLetter1 = guessedWordRef.WordValue[1];
+                char correctLetter2 = guessedWordRef.WordValue[2];
+                char correctLetter3 = guessedWordRef.WordValue[3];
+                char correctLetter4 = guessedWordRef.WordValue[4];*/
 
-                char correctLetter0 = playerGuess[0];
-                char correctLetter1 = playerGuess[1];
-                char correctLetter2 = playerGuess[2];
-                char correctLetter3 = playerGuess[3];
-                char correctLetter4 = playerGuess[4];
+                for(int j=0;j<5;j++)
+                {
+                    if (guessedWordRef.WordValue[j]==selectedWordRef.WordValue[j])
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write(guessedWordRef.WordValue[j]);
+                    }
 
-                //First Letter
+                    else if(selectedWordRef.WordValue.Contains(guessedWordRef.WordValue[j]))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write(guessedWordRef.WordValue[j]);
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write(guessedWordRef.WordValue[j]);
+                    }
+                }
+
+                Console.WriteLine("");
+
+                /*//First Letter
                 if (letter0 == correctLetter0)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
@@ -203,10 +227,10 @@ namespace KnockOffWordle
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("The Fifth Letter Does Not Match");
                     Console.WriteLine("");
-                }
+                }*/
 
                 //Win
-                if (playerGuess == theSelectedWord)
+                if (guessedWordRef.WordValue==selectedWordRef.WordValue)
                 {
                     Console.ForegroundColor = ConsoleColor.Blue;
                     Console.WriteLine("You guessed the word!");
@@ -215,8 +239,13 @@ namespace KnockOffWordle
 
             }
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("The Word Was: " + theSelectedWord);
+            Console.WriteLine("The Word Was: " + selectedWordRef.WordValue);
         }
     }
 
+    
+
+    
+
+    
 }
